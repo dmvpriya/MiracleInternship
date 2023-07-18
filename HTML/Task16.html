@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ValueOFA">A</label>
+    <input type="text" name="Value" id="A">    
+    <input type="button" name="button1" id="innerHtml" value="ClickMe" onclick="Prime()">
+    <p id="demo"></p>
+    <script>
+        function Prime()
+        {
+            var f1 = 0;
+            var f2 = 1;
+            var a = parseInt(document.getElementById("A").value);
+            console.log(f1);
+            console.log(f2);
+            for(var i = 0;i<a;i++)
+            {               
+                var f3 = f1+f2;
+                console.log(f3);
+                f1 = f2;
+                f2 = f3;
+            }
+            
+        } 
+
+        
+    </script>
+</body>
+</html>

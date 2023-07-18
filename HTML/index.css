@@ -1,0 +1,18 @@
+div.container{
+    border-style: dashed;
+    border: 1px;
+    padding: auto;
+}
+div.fields{
+    border-style: double;
+    border: 2px;
+    padding: auto;
+}
+div.boxes{
+    border-style: dotted;
+    border: 3px;
+}
+div.dots{
+    border-style: ridge;
+    border: 1px;
+}

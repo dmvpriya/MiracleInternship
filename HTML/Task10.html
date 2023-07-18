@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ValueA">A</label>
+    
+    <input type="text" name="num" id="number">
+    <input type="button" name="button1" id="innerHtml" value="ClickMe" onclick="EveOrOdd()">
+    <p id="demo">nature</p>
+    
+    <script>
+        function EveOrOdd()
+        {
+            var a = parseInt(document.getElementById("number").value);
+            if(a == 0)
+            {
+                document.getElementById("demo").innerHTML = "No nature the number is zero";
+            }
+            if((a%2==0))
+            {
+                document.getElementById("demo").innerHTML = "Even";
+            }
+            else
+            {
+                document.getElementById("demo").innerHTML = "Odd";
+            }
+
+
+        }
+ 
+        
+        
+    </script>
+</body>
+</html>

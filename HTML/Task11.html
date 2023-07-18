@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ValueA">A</label>    
+    <input type="text" name="num1" id="number1">
+    <label for="ValueA">A</label>    
+    <input type="text" name="num2" id="number2">
+    <label for="ValueA">A</label>    
+    <input type="text" name="num3" id="number3">
+    <input type="button" name="button1" id="innerHtml" value="ClickMe" onclick="LargestAmongThree()">
+    <p id="demo">Largest of Among three is :</p>
+    
+    <script>
+        function LargestAmongThree()
+        {
+            var a = parseInt(document.getElementById("number1").value);
+            var b = parseInt(document.getElementById("number2").value);
+            var c = parseInt(document.getElementById("number3").value);
+            if(a>b && a>c)
+            {
+                document.getElementById("demo").innerHTML = "Largest of Among three is :"+a;
+            }else if(a>b && a<c)
+            {
+                document.getElementById("demo").innerHTML = "Largest of Among three is :"+c;
+            }
+            else if(b>a && b>c)
+            {
+                document.getElementById("demo").innerHTML = "Largest of Among three is :"+b;
+            }
+            else{
+                document.getElementById("demo").innerHTML = "Largest of Among three is :"+c;
+            }
+
+
+        }
+ 
+        
+        
+    </script>
+</body>
+</html>

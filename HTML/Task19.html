@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <table>
+        <tr aria-colspan="4">Calculator</tr>
+        <tr>
+            <td colspan="4">
+                <input type="text" id = "TextValue">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="reset" value="C">
+            </td>
+            </tr>
+            <tr>
+       
+            <td>
+                <input type="button" value="1" onclick="Calculator(1)">
+            </td>
+       
+            <td>
+                <input type="button" value="2" onclick="Calculator(2)">
+            </td>
+      
+            <td>
+                <input type="button" value="3" onclick="Calculator(3)">
+            </td>
+       
+            <td>
+                <input type="button" value="+" onclick="Calculator('+')">
+            </td>
+        </tr>
+        <tr>
+       
+            <td>
+                <input type="button" value="4" onclick="Calculator(4)">
+            </td>
+       
+            <td>
+                <input type="button" value="5" onclick="Calculator(5)">
+            </td>
+      
+            <td>
+                <input type="button" value="6" onclick="Calculator(6)">
+            </td>
+       
+            <td>
+                <input type="button" value="-" onclick="Calculator('-')">
+            </td>
+        </tr>
+        <tr>
+       
+            <td>
+                <input type="button" value="7" onclick="Calculator(7)">
+            </td>
+       
+            <td>
+                <input type="button" value="8" onclick="Calculator(8)">
+            </td>
+      
+            <td>
+                <input type="button" value="9" onclick="Calculator(9)">
+            </td>
+       
+            <td>
+                <input type="button" value="*" onclick="Calculator('*')">
+            </td>
+        </tr>
+        <tr>
+       
+            <td>
+                <input type="button" value="/" onclick="Calculator('/')">
+            </td>
+       
+            <td>
+                <input type="button" value="0" onclick="Calculator(0)">
+            </td>
+      
+            <td>
+                <input type="button" value="." onclick="Calculator('.')">
+            </td>
+       
+            <td>
+                <input type="button" value="=" onclick="Calculator('=')">
+            </td>
+        </tr>
+
+    </table>
+    </div>
+    <script>
+        function Calculator(num)
+        {
+            if(num == '=')
+            {
+                document.getElementById("TextValue").value = eval(document.getElementById("TextValue").value);
+            }
+            else{
+                document.getElementById("TextValue").value += num;
+            }
+
+
+        }
+    </script>
+</body>
+</html>

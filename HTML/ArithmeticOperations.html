@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="Operations" id ="ArithmeticOperations">
+        <label for="A">A</label>
+        <input type="text" id="A">
+        <label for="B">B</label>
+        <input type="text" id="B">
+        <label for="Arithmetic Operations">Select a Operation</label>
+        <select name="Selection" id="OperatorSelection">
+            <option value="Addition" onclick="Add()">Addition</option>
+            <option value="Subtraction" onclick="Sub()">Subtraction</option>
+            <option value="Multiplication" onclick="Mul()">Multiplication</option>
+            <option value="Division" onclick="Div()">Division</option>
+            <option value="Modulo" onclick="Mod()">Modulo</option>
+        </select>
+        <p id = "demo">The value of 2 operators are</p>
+
+    </form>
+    <script>
+        function Add()
+        {
+            var a = Number(document.getElementById("A").value);
+            var b = Number(document.getElementById("B").value);
+            document.getElementById("demo").innerHTML = "Add is :"+(a+b);
+            
+        }
+        function Sub()
+        {
+            var a = Number(document.getElementById("A").value);
+            var b = Number(document.getElementById("B").value);
+            document.getElementById("demo").innerHTML = "Sub is :"+(a-b);
+            
+        }
+        function Mul()
+        {
+            var a = Number(document.getElementById("A").value);
+            var b = Number(document.getElementById("B").value);
+            document.getElementById("demo").innerHTML = "Mul is :"+(a*b);
+            
+        }
+        function Div()
+        {
+            var a = Number(document.getElementById("A").value);
+            var b = Number(document.getElementById("B").value);
+            document.getElementById("demo").innerHTML = "Div is :"+(a/b);
+            
+        }
+        function Mod()
+        {
+            var a = Number(document.getElementById("A").value);
+            var b = Number(document.getElementById("B").value);
+            document.getElementById("demo").innerHTML = "Mod is :"+(a%b);
+            
+        }
+    </script>
+</body>
+</html>

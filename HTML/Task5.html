@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ValueA">A</label>
+    <input type="text" name="A" id="ValueOfA">
+    <label for="ValueB">B</label>
+    <input type="text" name="B" id="ValueOfB">
+    <input type="button" name="button1" id="innerHtml" value="ClickMe" onclick="Swap()">
+    <p id="demo">Swapping two numbers</p>
+    
+    <script>
+        function Swap()
+        {
+            var a = parseInt(document.getElementById("ValueOfA").value);
+            var b = parseInt(document.getElementById("ValueOfB").value);
+            var c = a;
+            a = b;
+            b = c;
+            document.getElementById("demo").innerHTML = "The swap of 2 numbers is"+a+" "+b;
+
+        }
+        
+    </script>
+</body>
+</html>

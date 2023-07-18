@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ValueOFA">A</Slabel>
+    <input type="text" name="Value" id="A">
+    <input type="button" name="button1" id="innerHtml" value="ClickMe" onclick="Prime()">
+    <p id="demo"></p>
+    <script>
+        function Prime()
+        {
+            var a = parseInt(document.getElementById("A").value);
+            var count = 0;
+            for(var i = 2;i<a/2;i++)
+            {
+                if(a%i == 0)
+                {
+                    count++;
+                }
+                if(count == 0)
+                {
+                    document.getElementById("demo").innerHTML = a+" is a Prime number";
+                }
+                else{
+                    document.getElementById("demo").innerHTML = a+" is not a Prime number";
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

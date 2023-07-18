@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ValueOFA">A</label>
+    <input type="text" name="Value" id="A">    
+    <input type="button" name="button1" id="innerHtml" value="ClickMe" onclick="Prime()">
+    <p id="demo"></p>
+    <script>
+        function Prime()
+        {
+            var a = parseInt(document.getElementById("A").value);
+            var b = 0;
+            b = a;
+            var c = a.toString();
+            for(var i = 0;i<c.length;i++)
+            {
+                var remainder = 0;                
+                remainder = a%10;
+                var sum = 0;
+                sum =sum+ remainder*remainder*remainder; 
+                a = a/10;
+            }
+            if(sum == b)
+            {
+                document.getElementById("demo").innerHTML = "It is an amstrong number";
+            }
+            
+            
+        } 
+
+        
+    </script>
+</body>
+</html>

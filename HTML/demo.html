@@ -1,0 +1,181 @@
+<html>
+<head>
+<script>
+function vform(){
+var firstname=document.getElementById("fn").value;
+firstname=firstname.charAt(0).toUpperCase();
+var lastname=document.getElementById("ln").value;
+var username=document.getElementById("un").value;
+var password=document.getElementById("p").value;
+var confirmpassword=document.getElementById("cp").value;
+var DOB=document.getElementById("dob").value;
+var mailid=document.getElementById("m").value;
+mailid=mailid.toLowerCase();
+var phnno=document.getElementById("pn").value;
+var gender1=document.getElementById("g").value;
+var branch=document.getElementById("b").value;
+var languagesknown=document.getElementById("lk").value;
+var state=document.getElementById("s").value;
+var address=document.getElementById("a").value;
+var pincode=document.getElementById("pc").value;
+var x=/^[a-zA-Z]*$/.test(firstname);
+if(firstname==""||!x){
+window.alert("first name must be filled and only characters are allowed");
+return false;
+}
+var x1=/^[a-zA-Z]*$/.test(lastname);
+if(lastname==""||!x1){
+window.alert("last name must be filled and only characters are allowed");
+return false;
+}
+var x2=/^[a-zA-Z]*$/.test(username);
+if(username==""||!x2){
+window.alert("username must be filled and only characters are allowed");
+return false;
+}	
+if(password==""){
+window.alert("please enter password");
+return false;
+}
+var y=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/.test(password);
+if(!y){
+window.alert("password must contain atleast one Capital character,one special characterc,and one number");
+return false;
+}
+if(password.length<8){
+window.alert("password length must be atleast 8 characters");
+return false;
+}
+if(password.length>15){
+window.alert("password length must not exceed 15 characters");
+return false;
+}
+if(password!=confirmpassword){
+window.alert("incorrect password");
+return false;
+}
+if(DOB==""){
+window.alert("enter date of birth");
+return false;
+}
+if(mailid==""){
+window.alert("fill the email");
+return false;
+}
+var z=/^[a-z][a-z0-9]*[@][a-z]*[.][a-z]*$/.test(mailid)
+if(!z){
+window.alert("enter the correct email format");
+return false;
+}
+if(phnno==""){
+window.alert("enter phone number");
+return false;
+}
+if(phnno.length!=10){
+window.alert("enter valid number");
+return false;
+}
+if(address==""){
+window.alert("address must be filled");
+return false;
+}
+if(pincode==""){
+window.alert("enter pincode");
+return false;
+}
+if(pincode.length!=6){
+window.alert("enter valid pincode");
+return false;
+}
+}
+</script>
+<body>
+<form id="demo">
+First Name<br>
+<input type="text" id="fn"><br><br>
+Last Name<br>
+<input type="text" id="ln"><br><br>
+Username<br>
+<input type="text" id="un"><br><br>
+Password<br>
+<input type="password" id="p"><br><br>
+Confirm Password<br>
+<input type="password" id="cp"><br><br>
+Date of Birth<br>
+<input type="date" id="dob"><br><br>
+G-mail ID<br>
+<input type="mail" id="m"><br><br>
+Phone Number<br>
+<input type="number" id="pn" maxlength="10"><br><br>
+Gender<br>
+<input type="radio" id="g" name="gender" value="female">female<br>
+<input type="radio" id="g1" name="gender" value="male">male<br><br>
+Branch 
+<select id="b">
+<option>--SELECT--</option>
+<option>CSE</option>
+<option>IT</option>
+<option>ECE</option>
+<option>CIVIL</option>
+<option>EEE</option>
+<option>MECH</option>
+<option>OTHER</option></select><br><br>
+Languages Known<br>
+<input type="checkbox" id="lk">C
+<input type="checkbox" id="lk">C++
+<input type="checkbox" id="lk">Python
+<input type="checkbox" id="lk">Java
+<input type="checkbox" id="lk">MySQL
+<input type="checkbox" id="lk">HTML
+<input type="checkbox" id="lk">CSS
+<input type="checkbox" id="lk">Angular JS
+<input type="checkbox" id="lk">Boot Strap
+<input type="checkbox" id="lk">Php
+<input type="checkbox" id="lk">JavaScript
+<input type="checkbox" id="lk">SQL
+<input type="checkbox" id="lk">Ruby
+<input type="checkbox" id="lk">Pascal
+<br><br>
+State
+<select id="s">
+<option>--SELECT--</option>
+<option>Andhra Pradesh</option>
+<option>Arunachal Pradesh</option>
+<option>Assam</option>
+<option>Rajasthan</option>
+<option>Punjab</option>
+<option>Kerala</option>
+<option>Taminadu</option>
+<option>Telangana</option>
+<option>Jammu & Kashmir</option>
+<option>Gujarat</option>
+<option>Goa</option>
+<option>Madhya Pradesh</option>
+<option>Uttar Pradesh</option>
+<option>Himachal Pradesh</option>
+<option>Karnataka</option>
+<option>Jharkhand</option>
+<option>Odisha</option>
+<option>Chattisgarh</option>
+<option>Haryana</option>
+<option>West Bengal</option>
+<option>Bihar</option>
+<option>Maharastra</option>
+<option>Manipur</option>
+<option>Meghalaya</option>
+<option>Mizoram</option>
+<option>Nagaland</option>
+<option>Sikkim</option>
+<option>Tripura</option>
+<option>Uttarakhand</option>
+</select><br><br>
+Address<br>
+<textarea name="address" rows="5" cols="10" id="a" maxlength="50"></textarea><br><br>
+Pincode<br>
+<input type="number" id="pc" maxlength="6" ma><br><br>
+<input type="button" value="submit" onclick="vform()">
+<input type="button" value="reset"> 
+</form>
+</body>
+</head>
+<html>

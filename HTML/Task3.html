@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;padding: auto;">  
+    <p>with SqrtFunction</p> 
+    <button name="button" value="Click" onclick="sqrtOfNumber()">Click me!</button>
+    <p>without SqrtFunction</p>
+    <input type="text" id="value" name="Aa">
+    <button name="button1" value="Click" onclick="sqrtOfNumberWithoutfunction(value)"></button>
+<script>
+function sqrtOfNumber()
+{
+    var a = prompt("Enter a number :");
+    var result = Math.sqrt(a);
+    document.write("The square root of the given number is :"+result);
+}
+// function sqrtOfNumberWithoutfunction(x)
+// {
+//     var i = 1;
+//     if(i*i == x)
+//     {
+//         return i;
+//     }
+//     else if(i*i > n){
+//         var result = sqrtRoot(n,i-1,i);
+//         window.alert(result.toFixed(5));
+
+//     }
+// }
+//     function sqrtRoot(n,i,j)
+//     {
+//         let mid = (i+j)/2;
+//         let sqr = mid*mid;
+
+//         if(sqr == n||Math.abs(sqr-n)<0.00001)
+//         {
+//             return mid;
+//         }
+//         else if(sqr<n)
+//         {
+//             return sqrtRoot(n,mid,j);
+//         }
+//         else{
+//             return sqrtRoot(n,i,mid)
+//         }
+//     }
+    
+
+</script>
+</body>
+</html>
